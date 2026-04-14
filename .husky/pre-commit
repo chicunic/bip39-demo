@@ -1,0 +1,9 @@
+if ! git diff --quiet; then
+  echo "Error: You have unstaged changes. Please 'git add' all changes before committing."
+  echo ""
+  echo "Unstaged files:"
+  git diff --name-only
+  exit 1
+fi
+
+pnpm run check
