@@ -1,6 +1,31 @@
 # bip39-demo
 
-BIP39/BIP32/BIP84 cryptocurrency address derivation demo, supporting Bitcoin, Ethereum, Litecoin, Bitcoin Cash, and XRP.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D26-green.svg)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-blue.svg)](https://www.typescriptlang.org/)
+
+A test-driven demo of hierarchical deterministic (HD) wallet key and address derivation following BIP39/BIP32/BIP44/BIP84, supporting Bitcoin, Ethereum, Litecoin, Bitcoin Cash, and XRP.
+
+## Overview
+
+Starting from a single BIP39 mnemonic, the test suite derives keys and addresses across multiple coins and derivation schemes, asserting every result against known-good fixtures. It also covers watch-only derivation from extended public keys (`xpub`/`zpub`/`vpub`), where addresses are derived without access to the private key.
+
+## Coverage
+
+| Scheme     | Coins                                                       | Notes                                        |
+| ---------- | ----------------------------------------------------------- | -------------------------------------------- |
+| BIP39      | —                                                           | Mnemonic → seed                              |
+| BIP44      | Bitcoin, Ethereum, Litecoin, Bitcoin Cash, XRP (+ testnets) | Legacy `m/44'` accounts                      |
+| BIP84      | Bitcoin (+ testnet)                                         | Native SegWit (P2WPKH) `m/84'`               |
+| Watch-only | Bitcoin, Ethereum, Litecoin, Bitcoin Cash (+ testnets)      | Address derivation from `xpub`/`zpub`/`vpub` |
+
+## Scripts
+
+| Script       | Description                                  |
+| ------------ | -------------------------------------------- |
+| `pnpm test`  | Run the test suite (Vitest)                  |
+| `pnpm check` | Type-check, lint, and verify formatting      |
+| `pnpm fix`   | Auto-fix lint issues and format the codebase |
 
 ## Reference
 

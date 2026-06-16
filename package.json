@@ -10,9 +10,9 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
-  "packageManager": "pnpm@10.33.0+sha512.10568bb4a6afb58c9eb3630da90cc9516417abebd3fabbe6739f0ae795728da1491e9db5a544c76ad8eb7570f5c4bb3d6c637b2cb41bfdcdb47fa823c8649319",
+  "packageManager": "pnpm@11.7.0+sha512.19cc852c120c7125760f2443ee6be0ca5b40f9f50598de1a09a1f177503e010e57c23c77646e01e761de59bf874fb22a3398c33ab9691fc13eb946b6f0f4d620",
   "scripts": {
     "test": "vitest run",
     "check": "tsc -b && eslint . && prettier --check .",
@@ -26,22 +26,19 @@
     "bip39": "^3.1.0",
     "bitcoinjs-lib": "^7.0.1",
     "ethers": "^6.16.0",
-    "xrpl": "^4.6.0"
+    "xrpl": "^5.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^25.6.0",
-    "eslint": "^10.2.0",
+    "@types/node": "^25.9.3",
+    "@vitest/eslint-plugin": "^1.6.20",
+    "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
-    "prettier": "^3.8.2",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.2",
-    "vitest": "^4.1.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "bn.js@<4.12.3": "4.12.3"
-    }
+    "jiti": "^2.7.0",
+    "prettier": "^3.8.4",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1",
+    "vitest": "^4.1.9"
   }
 }
